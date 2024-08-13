@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility PLH Demo</title>
+    <p>August 13, 2024</p>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #2b2b2b;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 6rem;
+      }
+      .card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-decoration: none;
+        color: #333;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .card h2 {
+        font-size: 18px;
+        margin: 0;
+        color: #007bff;
+      }
+      .card p {
+        font-size: 14px;
+        margin: 10px 0 0;
+      }
+      .row {
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessibility PLH Demo</h1>
+    <div class="container">
+      <div class="row">
+        <a href="keyboard.html" class="card">
+          <h2>Keyboard Navigation</h2>
+          <p>Demonstrates proper keyboard navigation and focus management.</p>
+        </a>
+        <a href="keyboard-trap.html" class="card">
+          <h2>Keyboard Trap</h2>
+          <p>Shows how to avoid keyboard traps in your design.</p>
+        </a>
+        <a href="focus-order.html" class="card">
+          <h2>Focus Order</h2>
+          <p>Illustrates the correct focus order for keyboard navigation.</p>
+        </a>
+        <a href="well-titled.html" class="card">
+          <h2>Well-Titled</h2>
+          <p>Displays the importance of well-titled pages for accessibility.</p>
+        </a>
+        <a href="three-flashes.html" class="card">
+          <h2>Three Flashes</h2>
+          <p>Demonstrates flashing content compliance.</p>
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="error-identification.html" class="card">
+          <h2>Error Identification</h2>
+          <p>Displays how to identify and handle errors in forms.</p>
+        </a>
+        <a href="context-on-focus.html" class="card">
+          <h2>Context on Focus</h2>
+          <p>Demonstrates proper context on focus for interactive elements.</p>
+        </a>
+        <a href="context-on-input.html" class="card">
+          <h2>Context on Input</h2>
+          <p>Highlights how input fields provide context for users.</p>
+        </a>
+        <a href="labels-or-instructions.html" class="card">
+          <h2>Labels or Instructions</h2>
+          <p>
+            Shows the importance of labels and instructions for form elements.
+          </p>
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="name-role-value.html" class="card">
+          <h2>Name, Role, Value</h2>
+          <p>
+            Shows how to provide clear names, roles, and values for interactive
+            elements.
+          </p>
+        </a>
+        <a href="markup-parsing.html" class="card">
+          <h2>Markup Parsing</h2>
+          <p>Demonstrates correct and incorrect HTML parsing.</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

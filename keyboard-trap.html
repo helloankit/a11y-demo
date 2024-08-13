@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Keyboard Trap Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .trap,
+      .no-trap {
+        padding: 10px;
+        margin: 20px 0;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      button,
+      input,
+      textarea {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        width: 100%;
+      }
+      button:focus,
+      input:focus,
+      textarea:focus {
+        outline: 2px dashed #ff0000;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>No Keyboard Trap Demo</h1>
+    <p>Use the Tab key to navigate through the interactive elements below.</p>
+
+    <section class="no-trap">
+      <h2>No Keyboard Trap Example</h2>
+      <p>
+        This text area does not trap the keyboard. You can press Tab to move out
+        of it.
+      </p>
+      <textarea
+        rows="4"
+        cols="50"
+        aria-label="Text area with no keyboard trap"
+      ></textarea>
+      <button>Submit</button>
+    </section>
+
+    <section class="trap">
+      <h2>Keyboard Trap Example</h2>
+      <p>
+        In some older or poorly designed components, a user might get stuck
+        inside a text area or another input field.
+      </p>
+      <textarea
+        rows="4"
+        cols="50"
+        aria-label="Text area with potential keyboard trap"
+        onkeydown="if(event.key === 'Tab'){event.preventDefault();}"
+      ></textarea>
+      <p>
+        <em
+          >This example intentionally prevents the Tab key from working to
+          demonstrate a keyboard trap.</em
+        >
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        Ensure all interactive components allow users to navigate freely using
+        the keyboard.
+      </p>
+    </section>
+  </body>
+</html>

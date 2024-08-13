@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkpoint 3.3.2: Labels or Instructions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      small {
+        display: block;
+        margin-top: 5px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo: Labels or Instructions</h1>
+    <p>
+      Please fill out the form below. Notice how labels and instructions are
+      provided to help guide the user.
+    </p>
+
+    <form>
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        aria-describedby="usernameHelp"
+      />
+      <small id="usernameHelp"
+        >Your username should be between 4-12 characters long.</small
+      ><br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" aria-describedby="phoneHelp" />
+      <small id="phoneHelp"
+        >Please enter your phone number in the format: 123-456-7890.</small
+      ><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

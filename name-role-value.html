@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name, Role, Value Demo</title>
+  </head>
+  <body>
+    <h1>Name, Role, Value Demo</h1>
+    <p>
+      This example demonstrates how to provide clear name, role, and value
+      attributes for interactive elements.
+    </p>
+
+    <h2>Accessible Button</h2>
+    <button aria-label="Submit Form">Submit</button>
+
+    <h2>Custom Widget (Slider)</h2>
+    <div
+      role="slider"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="50"
+      tabindex="0"
+    >
+      <p>Slider with a value of 50</p>
+    </div>
+
+    <h2>Accessible Form</h2>
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      aria-required="true"
+      aria-describedby="usernameHelp"
+    />
+    <small id="usernameHelp">Enter your username, required field.</small>
+  </body>
+</html>

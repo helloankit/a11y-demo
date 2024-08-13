@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkpoint 3.2.1: On Focus</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .info {
+        display: none;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #e0f7fa;
+        border: 1px solid #00796b;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo: On Focus</h1>
+    <p>
+      When the input field below receives focus, no unexpected changes should
+      occur.
+    </p>
+
+    <label for="name">Enter your name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      onfocus="document.getElementById('info').style.display='block';"
+    />
+
+    <div id="info" class="info">
+      <p>
+        This additional information is provided without causing a page reload or
+        unexpected context change.
+      </p>
+    </div>
+  </body>
+</html>

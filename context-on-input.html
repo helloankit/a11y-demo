@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkpoint 3.2.2: On Input</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo: On Input</h1>
+    <p>
+      Select an option from the dropdown menu. The page should not reload or
+      navigate away automatically.
+    </p>
+
+    <label for="options">Choose an option:</label>
+    <select id="options" name="options">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+
+    <p>You selected: <span id="selection">None</span></p>
+
+    <script>
+      document
+        .getElementById("options")
+        .addEventListener("change", function () {
+          document.getElementById("selection").innerText =
+            this.options[this.selectedIndex].text;
+        });
+    </script>
+  </body>
+</html>

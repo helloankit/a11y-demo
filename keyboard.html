@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Navigation Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      a,
+      button,
+      input {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #007bff;
+        background-color: #f9f9f9;
+      }
+      a:focus,
+      button:focus,
+      input:focus {
+        outline: 2px dashed #ff0000;
+        outline-offset: 4px;
+      }
+      label {
+        font-weight: bold;
+      }
+      fieldset {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Keyboard Navigation Accessibility Demo</h1>
+    <p>
+      Use the Tab key to navigate through the interactive elements on this page.
+    </p>
+
+    <a href="#section1">Go to Section 1</a>
+    <a href="#section2">Go to Section 2</a>
+
+    <fieldset>
+      <legend>Form Example</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" aria-describedby="nameHelp" />
+      <small id="nameHelp">Enter your full name.</small>
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        aria-describedby="emailHelp"
+      />
+      <small id="emailHelp">Enter a valid email address.</small>
+
+      <button type="submit">Submit</button>
+    </fieldset>
+
+    <section id="section1" tabindex="-1">
+      <h2>Section 1</h2>
+      <p>
+        This is the first section. Focus here by clicking the link at the top.
+      </p>
+      <a href="#top">Back to Top</a>
+    </section>
+
+    <section id="section2" tabindex="-1">
+      <h2>Section 2</h2>
+      <p>
+        This is the second section. Focus here by clicking the link at the top.
+      </p>
+      <a href="#top">Back to Top</a>
+    </section>
+  </body>
+</html>
